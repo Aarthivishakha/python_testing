@@ -1,0 +1,15 @@
+tool: pydriller
+version: "2.9"
+language: python
+technique: "Development Process Analysis"
+classification: "Code Churn"
+target_files: []
+run:
+  command: "python run_pydriller.py"
+requirements:
+  - pydriller>=2.9
+notes: >
+  Reads the repository's real Git commit history through
+  Repository(...).traverse_commits(), so no separate source fixture is needed.
+expects:
+  - churn_report_generated: true
